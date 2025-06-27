@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens</title>
+</head>
+
+<body>
+    <h1>* Tipos de Imagens *</h1>
+    <img src="imagens/34.png" alt="" class=""><br><!--tamanhao normal-->
+    <img src="imagens/23.png" width="200" /><br><!--colocando apenas largura não há distorções na imagem-->
+    <!--a imagem svg mesmo grande não tem distorções nas bordas por ser vetorial e não por pixels, porém deve ser inserida dentro de sua tag <svg> e com td codigo (que é mto grande)-->
+    <img src="imagens/globe.svg" width="200">
+
+    <h2>* Descrição de Imagem - Acessibilidade</h2>
+    <img title="Imagem de livros" alt="Livros sobre uma mesa  e um vaso sobre a pilha de dois livros"
+        src="imagens/livro.jpg" />
+
+    <h2> *Imagens com Titulos</h2>
+    <section class="secao-imagens">
+        <!-- Quanto a imagens: .jpg melhor para fotos / .png melhor p/ logotipos, label -->
+        <figure class="imagem-item">
+            <img src="imagens/livro.jpg" alt="Capa de um livro" class="imagem-foto">
+            <figcaption>Foto de um livro (.jpg)</figcaption>
+            <!-- titulo da imagem -->
+        </figure>
+        <figure class="imagem-item">
+            <img src="imagens/34.png" alt="Exemplo de logotipo" class="imagem-logo" width="150">
+            <figcaption>Exemplo de logotipo(.png)</figcaption>
+        </figure>
+    </section>
+
+    <h1>* Tipos de Sons</h1>
+    <p>Seu navegador não tem suporte para esse áudio.</p>
+    <audio controls>
+        <source src="winner_outro-310618.mp3" />
+    </audio>
+    <!--autoplay toca direto qdo abre o site  <audio autoplay repeat controls> se retirar "controls" toca direto qdo acessar o site, como musica plano de fundo e os controles não aparecem-->
+    <h1>* Tipos de Vídeos</h1>
+    <video controls width="320" height="180">
+        <source src="video.mp4" />
+    </video>
+    <h1>* Tag Track</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/kPa7bsKwL-c?si=nleq07Bkwe2zr3No&amp;start=63"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p>Seu navegador não tem suporte para esse vídeo.</p>
+    <!--para esse tag preciso do arq legenda.vtt com os tempos e a letra da musica, por exemplo. Em kind descriptions ótimo para leitor de tela(acessibilidade)-->
+    <track default src="legenda-pt-br.vtt" kind="captions" srclang="pt-br" />
+    <track src="legenda.vtt" kind="captions" srclang="en" /><br>
+    <h1>* Iframes</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/E528HamOsxc?si=GzZK6i_INluSJci2"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</body>
+
+</html>
