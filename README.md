@@ -15,7 +15,7 @@ The goal of this Project Challenge is to create a website using a very basic str
 * Use all the tags explained in class: &lt;h1&gt; até &lt;h6&gt;, &lt;p&gt;, &lt;mark&gt;, &lt;small&gt;, &lt;i&gt;, &lt;u&gt;, &lt;strong&gt;, &lt;ol&gt;, &lt;ul&gt;, &lt;li&gt;, &lt;a&gt;, &lt;hr&gt;, &lt;sub&gt;, &lt;sup&gt;, &lt;blockquote&gt;
 * Use suggested new tags: &lt;font&gt;, &lt;del&gt;, &lt;p&gt;, &lt;abbr&gt;. The idea is to look up these tags on the internet, understand how they work, and apply them within the text.
   
-## ![estudante-on-line](https://github.com/user-attachments/assets/82482a78-0dd5-4edc-93b9-94916e16ad1f) Aulas Trabalhadas
+## ![Estudante online](https://raw.githubusercontent.com/izauratm/Projeto-Desafio-Dio/main/imagens/estudante-on-line.png) Aulas Trabalhadas
 * Introdução ao HTML na Prática
 * Trabalhando com Formulários em HTML
 * Estruturando o HTML + Formatações
@@ -23,7 +23,7 @@ The goal of this Project Challenge is to create a website using a very basic str
 * Criando Tabelas com HTML/CSS
 * Entendendo HTML Semântico 
 
-## ![estudante-on-line](https://github.com/user-attachments/assets/82482a78-0dd5-4edc-93b9-94916e16ad1f) Lessons Completed
+## ![Estudante online](https://raw.githubusercontent.com/izauratm/Projeto-Desafio-Dio/main/imagens/estudante-on-line.png) Lessons Completed
 * Introduc tion to HTML in Practice  
 * Working with HTML Forms  
 * Structuring HTML + Formatting  
