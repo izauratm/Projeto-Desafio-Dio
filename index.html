@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Curso de HTML - DIO.me</title>
+ 
+</head>
+
+<body>
+  <h1 id="inicio">Curso de HTML - DIO.me</h1>
+  <hr>
+   <h2>Índice dos Tópicos</h2>
+  <ul>
+    <li><a href="#introducao">Introdução ao HTML na Prática</a></li>
+    <li><a href="#formularios">Trabalhando com Formulários em HTML</a></li>
+    <li><a href="#estrutura">Estruturando o HTML + Formatações</a></li>
+    <li><a href="#midias">Trabalhando com Mídias utilizando HTML</a></li>
+    <li><a href="#tabelas">Criando Tabelas com HTML/CSS</a></li>
+    <li><a href="#semantico">Entendendo HTML Semântico</a></li>
+    <li><a href="#referencias">Links de Referências</a></li>
+  </ul>
+
+  <section id="introducao">
+    <h2>Introdução ao HTML na Prática</h2>
+    <p>HTML não é uma linguagem de programação; é uma linguagem de marcação, usada para definir a estrutura de um
+      conteúdo. HTML consiste de uma série de elementos, que usamos para delimitar ou agrupar diferentes partes do
+      conteúdo para que ele apareça de determinada maneira. As tags anexas podem transformar uma palavra ou imagem num hiperlink, podemos colocar palavras em itálico, aumentar ou diminuir a fonte e assim por diante.</p>
+    <p>Nessa etapa aprendi os fundamentos essenciais para o desenvolvimento web. Comecei instalando o
+      <strong>Visual Studio Code</strong> (VSC), um editor de código ideal para escrever e organizar arquivos <code>HTML</code>,
+      <code>CSS</code> e <code>JavaScript</code>. Também explorei o uso das <strong>ferramentas do navegador</strong>,
+      como o inspetor de elementos e o console, recursos essenciais para depurar, testar e entender a estrutura das páginas.
+    </p>
+    <p>A estrutura básica de um documento HTML começa com a declaração <code>&lt;!DOCTYPE html&gt;</code>,
+      seguida pelas tags <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> e <code>&lt;body&gt;</code>. Dentro do
+      <code>&lt;head&gt;</code>, inserimos metadados como <code>&lt;title&gt;</code>,
+      <code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code> e links para arquivos externos. Já o <code>&lt;body&gt;</code>
+      abriga todo o conteúdo visível da página. O elemento <code>&lt;main&gt;</code> define o conteúdo principal dentro do <code>&lt;body&gt;</code> e deve ser único na página não sendo incluídas secções da página comuns a todo o site como por exemplo informações de copyright, logotipo e campos de busca.
+    </p>
+
+    <h4>Tipos de tags e seus atributos</h4>
+      <ul>
+        <li><strong>Tags de conteúdo:</strong> <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;img&gt;</code> e
+          outras —
+          exibem diretamente conteúdo na página.</li>
+        <li><code>&lt;p&gt;</code> - serve para criar um parágrafo de texto. É uma das tags mais básicas do HTML.</li>
+        <li><code>&lt;abbr&gt;</code> - representa uma abreviação ou sigla, e você pode usar o atributo title para mostrar o
+          significado ao passar o mouse ajudando na acessibilidade e clareza do conteúdo. Exemplo: <abbr
+            title="Organização das Nações Unidas">ONU</abbr></li>
+          <li><code>&lt;font&gt;</code> - essa é uma tag obsoleta usada para definir cor, tipo e tamanho da fonte. Atualmente,
+            usamos o CSS para isso. Exemplo: <font color="blue" size="4" face="Arial">Texto azul em Arial</font>
+            <p>Exemplo do código obsoleto no texto HTML:</p>
+            <pre><code>&lt;font color="blue" size="4" face="Arial"&gt;Texto azul em Arial&lt;/font&gt;</code></pre>
+            <p>Exemplo com CSS inline:</p>
+            <pre><code>&lt;p style="color: blue; font-size: 18px; font-family: Arial;"&gt;Texto azul em Arial&lt;/p&gt;</code></pre>      
+          </li>
+        <li><code>&lt;del&gt;</code> - marca um texto como excluído, ideal para mostrar edições ou alterações. Ele aparece com
+          um risco no meio da palavra. Exemplo: Este produto <del>custava R$100</del> agora custa R$70.</li>
+        <li><code>&lt;mark&gt;</code> - destaca um trecho do texto, como se estivessemos passando um marca-texto amarelo por
+          cima da palavra. É bastante útil quando queremos destacar uma palavra ou frase específica em meio ao conteúdo. Por padrão aparece com a cor amarela.
+          Exemplo: Estudei muito para a prova e <mark>fui aprovado com nota máxima</mark>!</p>
+        <li><strong>Tags semânticas:</strong> <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>,
+          <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code> - ajudam a estruturar o
+          conteúdo e tornam o HTML mais acessível e otimizado para SEO.
+        </li>
+        <li><code>src</code> em <code>&lt;img src=&quot;imagem.jpg&quot;&gt;</code> - define a fonte da imagem.</li>
+        <li><code>alt</code> - fornece uma descrição da imagem para os leitores de tela.</li>
+        <li><code>target=&quot;_blank&quot;</code> - faz com que um link seja aberto em uma nova aba.</li>
+        <li><code>id</code> e <code>class</code> - permitem aplicar estilos via CSS ou manipulação com JavaScript.</li>
+      </ul>
+    
+    <p>Exemplo de uma estrutura HTML:</p>
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Exemplo de Estrutura HTML5&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+    &lt;header&gt;
+      &lt;!-- Cabeçalho do site --&gt;
+       &lt;img src=&quot;imagem.jpg&quot;&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt; &lt;!-- Conteúdo principal e tags --&gt;
+      &lt;section&gt;
+        &lt;div&gt;
+        &lt;h1&gt; &lt;!-- h1 é o principal; h2, h3, h4, h5, h6 são subtítulos --&gt;&lt;/h1&gt;
+        &lt;p&gt;Meu primeiro paragráfo.&lt;/p&gt;
+        &lt;p&gt;Estou aprendendo muito com o curso!&lt;/p&gt;
+
+        &lt;h2&gt;Estruturando o HTML.&lt;/h2&gt;
+        &lt;p&gt;Construindo um site.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+      &lt;!-- Rodapé do site --&gt;
+    &lt;/footer&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+    <a class="voltar" href="#inicio">(voltar ao topo)</a>
+  </section>
+
+  <section id="formularios">
+    <h2>Trabalhando com Formulários em HTML</h2>
+    <p>Formulários são partes muito importantes na Web — proporcionam muitas das funcionalidades que precisamos para interagir em páginas web. São utilizados para registrar-se, conectar-se, enviar comentários, comprar produtos e muito mais.</p>
+    <p>Nesse módulo aprendi em como criar formulários com <code>&lt;form&gt;</code> e campos como
+      <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, <code>checkbox</code>,
+      <code>radio</code> e botões <code>&lt;button&gt;</code>.
+  
+    <h4>O que cada Tag faz</h4>  
+    <ul> 
+    <li><code>&lt;input&gt;</code>: campo de entrada que pode ser texto, número, email, senha etc., dependendo do atributo
+      <code>type</code>.</li>
+    <li><code>&lt;textarea&gt;</code>: campo para mensagens mais longas, como comentários ou descrições podendo ser ajustado em linhas e colunas.</li>
+    <li><code>&lt;select&gt;</code>: cria um menu suspenso com várias opções definidas por <code>&lt;option&gt;</code>.
+    </li>
+    <li><strong>checkbox</strong>: permite marcar múltiplas opções de escolha (habilidades, preferências etc.).</li>
+    <li><strong>radio</strong>: permite escolher apenas uma opção entre várias.</li>
+    <li><code>&lt;button&gt;</code>: usado para enviar, limpar ou executar ações — <code>type="submit"</code>,
+      <code>type="reset"</code> ou <code>type="button"</code>.</li></ul> 
+
+    <h4>Exemplos de Formulário realizado com a aula:</h4><p>(Voce pode interagir e testá-los!)</p>
+      <form class="sem-estilo">
+      <label>Text: </label><input type="text" /><br>
+      <label>Number: </label><input type="number" min="0" max="99" /> <br>
+      <label>Button: </label><input type="button" value="Enviar" /><br>
+      <label>Range: </label><input type="range" min="0" max="100" value=" 50" /><br>
+      <label>Color: </label><input type="color" value="#ff0000" /><br>
+      <label>E-mail: </label><input type="email" /><br>
+      <label>URL: </label><input type="url" /><br>
+      <label>Date: </label><input type="date" /><br>
+      <label>Time: </label><input type="time" /><br>
+      <label>Month: </label><input type="month" /><br>
+      <label>Week: </label><input type="week" /><br>
+      <label>Checkbox: </label><input type="checkbox" /></label><input type="checkbox" /><br>
+      <label>Radio: </label><input type="radio" name="radio" value="1"> Opção 1
+      <input type="radio" name="radio" value="2" /> Opção 2<br>
+      <label>Hidden: </label><input type="hidden" /><br>
+      <label>File: </label><input type="file" multiple accept=".txt,.pdf,.docx" /><br>
+      <label>Search: <label><input type="search" /><br> <label>Button:</label><input type="submit" value="Enviar" /><br>
+    </form><br>
+    <form onsubmit="" method="get"> 
+        <label> Nome = </label><input type="text" name="nome" required>
+        <label> Idade = </label><input type="number" name="idade" required>
+        <label> Password* = </label><input type="password" name="password" required><br>
+
+        <br><button type="button" onclick="alert('Clique Aqui')">Clicável</button><br>
+        <br><button type="button"
+        onmouseover="alert('Clique Aqui')">Clicável</button><br> 
+        <br><button type="reset"> Limpar</button><br>
+        <br><button type="submit"> Enviar</button><br>
+
+        <br><label>Nome: </label><input type="text" name="nome" required><br>
+        <br><label>Cargo: </label>
+        <select name="cargo"> 
+            <option value="">Selecione o Cargo</option>
+            <option value="Diretor">Diretor</option>
+            <option value="Gerente">Gerente</option>
+            <option value="Analista">Analista</option>
+            <option value="Desenvolvedor">Desenvolvedor</option>
+            <option value="Estagiário">Estagiário</option>
+            <option value="Jovem Aprendiz">Jovem Aprendiz</option>
+        </select><br>
+       <br><label>Assunto: </label><input type="assunto" name="assunto" required><br>
+      <br> <label>Mensagem: </label><br>
+       <textarea name="mensagem" rows="5" cols="30" required></textarea><br>
+        <br><button type="submit">Enviar</button>       
+    </form>
+  </section>
+<a class="voltar" href="#inicio">(voltar ao topo)</a>
+ 
+
+  <section id="estrutura">
+    <h2>Estruturando o HTML + Formatações</h2>
+    <p>Esse módulo me ensinou a organizar o conteúdo de uma página com <code>&lt;div&gt;</code>,
+      <code>&lt;span&gt;</code>, <code>&lt;fieldset&gt;</code> e adicionar cores, iframes e elementos externos com
+      <code>&lt;embed&gt;</code>.</p>
+
+      <h4>O que cada Tag faz</h4>
+      <ul> <li>
+      <code>&lt;div&gt;</code>: usada para agrupar blocos de elementos. Não tem significado semântico, mas é muito útil para organização e aplicação de estilos com CSS. <br>
+      <small>Exemplo: <code>&lt;div class="container"&gt; ... &lt;/div&gt;</code></small> </li>
+
+    <li>
+      <code>&lt;span&gt;</code>: parecida com a <code>&lt;div&gt;</code>, mas usada para agrupamentos em linha, geralmente dentro de textos.
+      <br> <small>Exemplo: <code>&lt;p&gt;Olá, &lt;span class="destaque"&gt;mundo!&lt;/span&gt;&lt;/p&gt;</code></small></li>
+
+    <li>
+      <code>&lt;fieldset&gt;</code>: agrupa campos relacionados de um formulário, criando uma borda visual. <br>
+      <small>Exemplo:<code>&lt;fieldset&gt;&lt;legend&gt;Dados Pessoais&lt;/legend&gt;...&lt;/fieldset&gt; </code> </small> </li>
+
+    <li><strong>Adicionando cores</strong>: usei o atributo <code>style</code> diretamente no HTML, mas também podemos aplicar classes CSS, criando um arquivo (style.css) no próprio VSC.<br>
+      <small>Exemplo inline</small>: <code>&lt;p style="color: blue;"&gt;Texto azul&lt;/p&gt;</code></li>
+
+    <li>
+      <code>&lt;iframe&gt;</code>: permite inserir conteúdos externos, como vídeos do YouTube ou mapas. <br> <small>Exemplo:
+        <code>  &lt;iframe src="https://www.dio.me/" width="400"&gt;&lt;/iframe&gt; </code> </small> </li>
+
+    <li>
+      <code>&lt;embed&gt;</code>: insere conteúdos multimídia ou interativos, como PDFs, animações ou outros arquivos.
+      <br><small>Exemplo: <code> &lt;embed src="documento.pdf" type="application/pdf" width="400" height="300"&gt;</code></small></li></ul> 
+  
+    <h4>Exemplo realizado com a aula: Div, Fieldset e Cores</h4>
+    <form>
+      <h3>Formulário de Cadastro</h3>
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <p>Preencha os campos abaixo:</p>
+        <div class="row">
+          <div class="col">
+            <label>Nome:</label><input type="text" />
+            <label>E-mail:</label><input type="email" />
+          </div>
+          <div class="col">
+            <label>Profissão:</label><input type="text" />
+            <label>Empressa:</label><input type="text" />
+          </div>
+      </fieldset>
+      <fieldset>
+        <legend>Endereço</legend>
+        <div class="col">
+          <label>Endereço:</label><input type="text" />
+          <label>Número:</label><input type="number" />
+        </div>
+        <div class="col">
+          <label>Bairro:</label><input type="text" />
+        </div>
+        <div class="col">
+          <label>Cidade/UF:</label><input type="text" />
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Informações para Contato</legend>
+        <div class="col">
+          <label>Celular:</label><input type="text" />
+          <label>WhatsApp:</label><input type="text" />
+        </div>
+        <div class="col">
+          <label>Linkedin:</label><input type="text" />
+          <label>GitHub:</label><input type="text" />
+        </div>
+      </fieldset>
+      <div class="col">
+        <button type="reset">Limpar</button>
+        <button type="submit">Enviar Formulário</button>
+      </div>
+    </form>
+
+    <h4>Exemplo de Iframe: </h4>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6908.625253500758!2d-51.20168775401248!3d-30.02788768281292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1751031698871!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="450" height="300"></iframe><br>
+
+    <a class="voltar" href="#inicio">(voltar ao topo)</a>
+  </section>
+
+  <section id="midias">
+    <h2>Trabalhando com Mídias utilizando HTML</h2>
+    <p>Nesse módulo foi ensinado como inserir imagens com <code>&lt;img&gt;</code>, vídeos com
+      <code>&lt;video&gt;</code>, áudios com <code>&lt;audio&gt;</code> e legendas com <code>&lt;track&gt;</code>. Usei
+      o <code>&lt;iframe&gt;</code> para embutir conteúdos de fora, como vídeos do YouTube e descrição de imagens
+      auxiliando na acessibilidade.</p>
+      <p>Para melhorar a experiência do usuário a imagem deve ser responsiva. Significa se adaptar automaticamente ao tamanho da tela ou do dispositivo em que está sendo exibida — seja um celular, tablet ou computador. O objetivo é garantir que a imagem fique sempre visível, proporcional e sem distorções, independentemente da resolução.</p>
+      <p>OBS: Como não tinha a ferramenta apropriada para inserir uma legenda e a tradução em um vídeo, utilizei um do YouTube - é só ouvir e escolher uma das várias legendas. </p>
+    
+      <h4> O que cada Tag faz</h4>
+      <ul> <li>
+        <code>&lt;video&gt;</code>: usada para incorporar vídeos diretamente na página. Pode conter os
+        atributos <code>controls</code> (exibe controles como play/pause), <code>autoplay</code>, <code>loop</code> e
+        <code>muted</code>.
+        <br>
+        <small>Exemplo:</small><br>
+        <pre><code>&lt;video width="320" controls&gt;
+        &lt;source src="video.mp4" type="video/mp4"&gt;
+        Seu navegador não suporta vídeo.
+      &lt;/video&gt;</code></pre>
+      </li>
+      
+      <li>
+        <code>&lt;audio&gt;</code>: permite tocar áudios como música, podcasts ou efeitos sonoros. Assim como
+        o vídeo, pode ter <code>controls</code>, <code>autoplay</code>, <code>loop</code> etc.
+        <br>
+        <small>Exemplo:</small><br>
+        <pre><code>&lt;audio controls&gt;
+        &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+        Seu navegador não suporta áudio.
+      &lt;/audio&gt;</code></pre>
+      </li>
+      
+      <li>
+        <code>&lt;track&gt;</code>: adiciona  legendas ou transcrições a um vídeo (dentro da tag
+        <code>&lt;video&gt;</code>), melhorando a acessibilidade do usuário.
+        <br>
+        <small>Exemplo com legendas:</small><br>
+        <pre><code>&lt;video width="320" controls&gt;
+        &lt;source src="filme.mp4" type="video/mp4"&gt;
+        &lt;track src="legendas.vtt" kind="subtitles" srclang="pt" label="Português"&gt;
+      &lt;/video&gt;</code></pre>
+      </li></ul> 
+
+    <h4>Alguns exemplos trabalhados em aula:</h4>
+    <h4>Tipos de Imagens</h4>
+    <img src="imagens/globe.svg" width="200">
+    <p>* Imagem SVG: imagem vetorial baseada em XML podendo ser redimensionada sem perder a qualidade. Ideal para logotipos, ícones, gráficos, permitindo animações, interação com JavaScript e estilizaçao com CSS.</p>
+
+    <h4> Descrição de Imagem (com Acessibilidade)</h4>
+    <img title="Imagem de livros sobre bancada" alt="Livros sobre uma mesa e um pequeno vaso sem flores sobre a pilha de dois livros"
+      src="imagens/livro.jpg" />
+    <figcaption>Foto de livros (.jpg)</figcaption>
+    <p>*Imagem JPG: imagem com formato rasterizada, usa compressão com perda, o que reduz o tamanho do arquivo podendo ter afetada a nitidez. Ideal para fotos e imagens, rica em detalhes, não suporta fundo transparente.</p> 
+    <figure class="imagem-item">
+      <img src="imagens/34.png" alt="Exemplo de logotipo" class="imagem-logo" width="150">
+      <figcaption>Exemplo de logotipo (.png)</figcaption>
+    </figure>
+    <p>* Imagem PNG: Suporta transparência, compressão sem perda de qualidade. Formato de imagem rasterizada - baseada em pixels. Ideal para imagens com poucos detalhes.</p>
+
+    <h4> Tipos de Sons</h4>
+    <audio controls>
+      <source src="winner_outro-310618.mp3" />
+    </audio>
+    <p>Seu navegador não tem suporte para esse áudio.</p>
+
+    <h4>Tipos de Vídeos</h4>
+    <video controls width="320" height="180">
+      <source src="video.mp4" /></video>
+    <p>Seu navegador não tem suporte para esse vídeo.</p>
+
+    <h4> Tag Track</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/kPa7bsKwL-c?si=nleq07Bkwe2zr3No&amp;start=63"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <track default src="legenda-pt-br.vtt" kind="captions" srclang="pt-br" />
+    <track src="legenda.vtt" kind="captions" srclang="en" />
+    <p>Seu navegador não tem suporte para esse vídeo.</p>
+    
+    <h4>Iframes</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/E528HamOsxc?si=GzZK6i_INluSJci2"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p>Seu navegador não tem suporte para esse vídeo.</p>
+    <a class="voltar" href="#inicio">(voltar ao topo)</a>
+    </section>
+    
+    
+
+  <section id="tabelas">
+    <h2>Criando Tabelas com HTML/CSS</h2>
+    <p>Uma tabela é um conjunto estruturado de dados composto de linhas e colunas (dados tabulares). Uma tabela permite consultar de forma rápida e fácil valores que indicam algum tipo de conexão entre diferentes tipos de dados, por exemplo: uma pessoa e sua idade; um produto e seu valor, descrição etc.</p>
+
+    <p>Nessa aula aprendi a criar e estilizar tabelas com <code>&lt;table&gt;</code>, definindo linhas
+      <code>&lt;tr&gt;</code> e colunas com <code>&lt;td&gt;</code> ou <code>&lt;th&gt;</code>. Para organizar uma
+      tabela podemos usar: <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> e <code>&lt;tfoot&gt;</code>. O CSS
+      significa Cascading Style Sheets (ou Folhas de Estilo em Cascata, em português). Ele é usado para definir o estilo
+      visual de páginas HTML.</p>
+
+      <h4> O que cada Tag faz</h4>
+      <ul> <li>
+      <code>&lt;table&gt;</code>: define a <strong>tabela</strong> no HTML. É o contêiner onde todos os dados tabulares ficam organizados. <br>
+      <small>Exemplo: <code>&lt;table&gt; ... &lt;/table&gt;</code></small> </li>
+
+    <li>
+      <code>&lt;tr&gt;</code>: significa <strong>table row</strong> (linha da tabela). Cada linha da tabela deve estar dentro de um <code>&lt;tr&gt;</code>. <br> <small>Exemplo: <code>&lt;tr&gt;&lt;td&gt;Item&lt;/td&gt;&lt;/tr&gt;</code></small></li>
+
+    <li>
+      <code>&lt;td&gt;</code>: significa <strong>table data</strong> — é uma célula de dado dentro de uma linha. Usado para valores comuns.
+      <br> <small>Exemplo: <code>&lt;td&gt;João&lt;/td&gt;</code></small> </li>
+
+    <li>
+      <code>&lt;th&gt;</code>: <strong>table header</strong> — define as células de um cabeçalho. O conteúdo aparece em negrito e centralizado por padrão.<br><small>Exemplo: <code>&lt;th&gt;Nome&lt;/th&gt;</code></small></li>
+
+    <li>
+      <code>&lt;thead&gt;</code>: agrupa as linhas de <code>&lt;th&gt;</code> que formam o <strong>cabeçalho</strong> da tabela. É útil para organização e acessibilidade.<br>
+      <small>Exemplo:  <code> &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Nome&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt; </code> </small> </li>
+
+    <li>
+      <code>&lt;tbody&gt;</code>: agrupa o <strong>corpo principal</strong> da tabela, onde ficaram os dados (linhas com <code>&lt;td&gt;</code>). <br> <small>Exemplo:<code> &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;João&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;</code> </small></li>
+
+    <li>
+      <code>&lt;tfoot&gt;</code>: representa o <strong>rodapé da tabela</strong>, geralmente usado para somas, totais ou notas.
+      <br> <small>Exemplo:<code> &lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;Total&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;</code> </small> </li></ul> 
+
+    <h4>Exemplos de Tabelas feitas durante o curso:</h4>
+    <div class="tabela-um">
+      <table summary="A tabela se refere aos dados dos alunos da Dio.me turma EAD 2025, constando nome, idade e cidade"
+        border="1" width="450" align="center" cellspacing="10" cellpadding="10">
+        <caption><b>Alunos da Dio.me<b></caption>
+        <thead>
+          <tr><!--linhas na tabela-->
+            <th title="Nome Completo">Nome</th>
+            <!--colunas na tabela e th identifica sendo cabeçalho e negrito automático-->
+            <th title="Idade">Idade</th>
+            <th title="Cidade de Nascimento">Cidade</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr id="1"> <!--com o id no JS podemos excluir,adicionar etc-->
+            <td>João Maciel</td>
+            <td>25</td>
+            <td>São Paulo</td>
+          </tr>
+          <tr id="2">
+            <td>Lucia Maltta</td>
+            <td>22</td>
+            <td>Belém do Pará</td>
+          </tr>
+          <tr id="3">
+            <td>Rosana Teixeira</td>
+            <td>57</td>
+            <td>Porto Alegre</td>
+          </tr>
+          <tr id="4">
+            <td>Júlio dos Santos</td>
+            <td>19</td>
+            <td>Curitiba</td>
+          </tr>
+          <tr id="5">
+            <td>Alredo Moura</td>
+            <td>48</td>
+            <td>São Paulo</td>
+          </tr>
+          <tr id="6">
+            <td>Manoela Goddoy</td>
+            <td>28</td>
+            <td>Rio de Janeiro</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Total</td>
+            <td>Alunos: 06</td>
+            <td>Cidades: 05</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div class="tabela-dois">
+      <table widht="250" align="center" cellspacing="0" cellpadding="5">
+        <thead>
+          <tr> <!--rowspan junta linhas-->
+            <th colspan="3"> Tabela Alunos Dio.me</th>
+          </tr>
+          <th>Nome</th>
+          <th>Idade</th>
+          <th>Cidade</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>João</td>
+            <td>25</td>
+            <td>São Paulo</td>
+          </tr>
+          <tr>
+            <td>Lucia</td>
+            <td>22</td>
+            <td>Belém do Pará</td>
+          </tr>
+          <tr>
+            <td>Rosana</td>
+            <td>57</td>
+            <td>Porto Alegre</td>
+          </tr>
+          <tr>
+            <td>Júlio</td>
+            <td>19</td>
+            <td>Curitiba</td>
+          </tr>
+          <tr>
+            <td>Alredo</td>
+            <td>48</td>
+            <td>São Paulo</td>
+          </tr>
+          <tr>
+            <td>Manoela</td>
+            <td>28</td>
+            <td>Rio de Janeiro</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan=""></td>
+            <td>Total Alunos</td>
+            <td>06</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <a class="voltar" href="#inicio">(voltar ao topo)</a>
+  </section>
+
+  <section id="semantico">
+    <h2>Entendendo HTML Semântico</h2>
+    <p>Aqui, aprendi sobre HTML semântico, acessibilidade e SEO.</p>
+    <p>Acessibilidade, no contexto da web, significa tornar os sites utilizáveis por todas as pessoas, incluindo aquelas com deficiências visuais, auditivas, motoras, cognitivas ou neurológicas. A ideia central é garantir que ninguém fique de fora ao navegar por uma página, independentemente de suas habilidades ou do dispositivo utilizado.E para isso, é preciso:</p>
+    <li>Usar um HTML semântico para ajudar leitores de tela a interpretar a página corretamente.</li>
+    <li>Garantir contraste suficiente entre texto e fundo, para facilitar a leitura.</li>
+    <li>Tornar o site navegável apenas com o teclado, sem exigir o uso de mouse.</li>
+    <li>Incluir legendas e transcrições em vídeos e áudios com a tag <code>&lt;track&gt;</code>.</li>
+    <li>Oferecer descrições alternativas e detalhadas para as imagens com o atributo <i>alt</i> (permite que o usuário entenda o que a imagem representa, mesmo sem vê-la).</li>
+
+    <p><strong>*SEO</strong> (Search Engine Optimization) é um conjunto de técnicas voltadas para otimizar o
+      posicionamento do site em mecanismos de busca. Significa fazer com que seu site apareça melhor nos resultados do
+      Google quando alguém realizar alguma pesquisa sobre um assunto ou algo. Um bom uso das tags, títulos claros e
+      links internos ajudam muito nisso, além de palavras-chaves, um conteúdo de boa qualidade e um HTML semântico.</p>
+      <img src="imagens/seo.png" alt="">
+    
+    <p>Nesse bloco aprendi a usar as tags <code>&lt;aside&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>,
+      <code>&lt;article&gt;</code>, <code>&lt;blockquote&gt;</code>, <code>&lt;q&gt;</code>,
+      <code>&lt;figure&gt;</code>, <code>&lt;figcaption&gt;</code> e <code>&lt;picture&gt;</code>. Elas ajudam na
+      acessibilidade e no SEO (otimização para buscadores). </p>
+
+      <h4>Tags Semânticas e de Conteúdo Visual</h4>
+      <ul>
+        <li>
+          <code>&lt;aside&gt;</code>: representa um conteúdo complementar ou lateral, como uma barra lateral, nota ou sugestão
+          relacionada ao conteúdo principal. <br>
+          <small>Exemplo: <code>&lt;aside&gt;Leia também:...&lt;/aside&gt;</code></small>
+        </li>
+      
+        <li>
+          <code>&lt;section&gt;</code>: define uma <strong>seção temática</strong> da página, geralmente com um título
+          próprio. Usada para agrupar conteúdos relacionados.
+          <small>Exemplo: <code>&lt;section&gt;&lt;h2&gt;Serviços&lt;/h2&gt;...&lt;/section&gt;</code></small>
+        </li>
+      
+        <li>
+          <code>&lt;nav&gt;</code>: indica um <strong>bloco de navegação</strong>, contendo os links para outras partes da
+          página ou do site.<br>
+          <small>Exemplo: <code>&lt;nav&gt;&lt;a href=&quot;#home&quot;&gt;Início&lt;/a&gt;&lt;/nav&gt;</code></small>
+        </li>
+      
+        <li>
+          <code>&lt;article&gt;</code>: representa um <strong>conteúdo independente</strong>, como postagens, notícias ou
+          comentários — deve fazer sentido mesmo fora da página. <br>
+          <small>Exemplo: <code>&lt;article&gt;&lt;h3&gt;Notícia do Dia&lt;/h3&gt;...&lt;/article&gt;</code></small>
+        </li>
+      
+        <li>
+          <code>&lt;blockquote&gt;</code>: usado para citar um <strong>trecho longo</strong> de outro autor ou fonte,
+          geralmente com recuo visual.<br>
+          <small>Exemplo:
+            <code>&lt;blockquote cite=&quot;https://autor.com&quot;&gt;Frase célebre.&lt;/blockquote&gt;</code></small>
+        </li>
+      
+        <li>
+          <code>&lt;q&gt;</code>: usado para citações <strong>curtas e embutidas</strong> dentro do texto. O navegador
+          adiciona aspas automaticamente. <small>Exemplo:
+            <code>&lt;p&gt;Ele disse: &lt;q&gt;Vamos aprender HTML.&lt;/q&gt;&lt;/p&gt;</code></small>
+        </li>
+      
+        <li>
+          <code>&lt;figure&gt;</code>: agrupa um <strong>conteúdo visual</strong> (imagem, gráfico, código etc.) com sua
+          legenda. Ideal para conteúdos que podem ser referenciados separadamente.
+          <small>Exemplo: <code>&lt;figure&gt;&lt;img src=&quot;mapa.png&quot;&gt;...&lt;/figure&gt;</code></small>
+        </li>
+      
+        <li>
+          <code>&lt;figcaption&gt;</code>: fornece uma <strong>legenda para o conteúdo do &lt;figure&gt;</strong>. Deve estar
+          dentro da tag <code>&lt;figure&gt;</code>.<br><small>Exemplo:
+            <code>&lt;figcaption&gt;Mapa do Brasil em 2025&lt;/figcaption&gt;</code></small>
+        </li>
+      
+        <li>
+          <code>&lt;picture&gt;</code>: permite carregar <strong>imagens diferentes para tamanhos de tela variados</strong>
+          (responsivo). Contém várias fontes e uma imagem final.<br><small>Exemplo:
+            <code>&lt;picture&gt;  &lt;source srcset=&quot;imagem-mobile.jpg&quot; media=&quot;(max-width: 600px)&quot;&gt;
+        &lt;img src=&quot;imagem-padrao.jpg&quot; alt=&quot;Imagem Responsiva&quot;&gt;&lt;/picture&gt; </code></small>
+        </li>
+      </ul>
+  
+
+    <h4>Eis alguns exemplos realizado com Article, Blockquote e Q:</h4>
+    <article>
+      <h4>Uso em excesso do ChatGPT pode nos deixar menos inteligentes, diz estudo.</h4>
+      <p>Artigo Olhar Digital publicado em <time pubdate><i>21/06/2025 às 04:45min.</i></time></p>
+
+      <p>Pesquisa revela que confiar demais em ferramentas como o ChatGPT compromete habilidades mentais e dificulta o aprendizado.</p>
+      <p>Em um estudo conduzido pelo MIT, pesquisadores descobriram que a dependência excessiva de ferramentas de inteligência artificial, como o ChatGPT, pode prejudicar o funcionamento cerebral e comprometer a memória, criatividade e pensamento crítico dos usuários.</p>
+      <blockquote cite="https://olhardigital.com.br/">Durante quatro meses, 54 participantes realizaram tarefas de escrita com diferentes níveis de auxílio: apenas o cérebro, mecanismos de busca ou IA generativa.</blockquote>
+      <p>A atividade cerebral foi monitorada via eletroencefalografia (EEG). Os que escreveram sem ajuda apresentaram a maior conectividade neural, enquanto os que usaram IA mostraram uma redução de até 55% nessa conectividade, especialmente nas áreas ligadas à memória e pensamento profundo</p>
+      <p>Além disso, a maioria dos usuários de IA teve dificuldade para lembrar o que acabara de escrever, enquanto os demais demonstraram memorização quase perfeita.</p>
+      <p><q cite="https://olhardigital.com.br/"> O MIT recomenda uma abordagem estratégica ao uso da IA, combinando sua conveniência com o fortalecimento contínuo das habilidades humanas.</q> </p>
+      <p><small><i>Fonte: Site Olhar Digital<i></small></p>
+    </article>
+
+    <a class="voltar" href="#inicio">(voltar ao topo)</a>
+    </section>
+
+  <section id="referencias">
+    <h2>Links de Referências</h2>
+    <p>Aqui voce poderá explorar e dominar diversas ferramentas que vão aprimorar seus conhecimentos e ajudar na criação
+      do seu próprio site, com estrutura adequada e foco em acessibilidade.</p>
+      
+    <li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li> 
+    <li><a href="https://www.w3schools.com/" target="_blank"> W3Schools</a></li>
+    <li><a href="https://www.w3.org/TR/2014/REC-html5-20141028/obsolete.html" target="_blank">W3C - Obsolete Tags</a></li>
+    <li><a href="https://developer.mozilla.org/pt-BR/" target="_blank">MDN Web Docs</a></li>
+    <li><a href="https://www.nvaccess.org/download/" target="_blank">NVDA - App Leitor de Tela</a></li>
+    <li><a href="https://oampliadordeideias.com.br/6-leitores-de-tela-para-seu-computador/" target="_blank">Outros
+        leitores de telas</a></li>
+    <li><a href="https://www.w3.org/WAI/" target="_blank">W3C - Acessibilidade</a></li>
+    <li><a href="https://www.wcag.com/" target="_blank">WCAG - Acessibilidade</a></li>
+    <li><a href="https://business.google.com/br/google-ads/" target="_blank">Google ADS</a></li>
+    <li><a href="https://schema.org/" target="_blank">Schema</a></li>
+    <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
+    <li><a href="https://html-css-js.com/css/generator/box-shadow/" target="_blank">HTML-CSS-JS</a></li>
+    <li><a href="https://www.pexels.com/pt-br/" target="_blank">Pexels - Vídeos e Imagens Gratuitas</a></li>
+    <li><a href="https://pixabay.com/pt/videos/" target="_blank">Pixabay - Vídeos e Imagens Gratuitas</a></li>
+    <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+    <li><a href="https://www.nikse.dk/" target="_blank">Nikse.dk - Editor para Legendas</a></li>
+    <li><a href="https://www.capcut.com/" target="_blank">CapCut - Editor para Legendas</a></li>
+    <li><a href="https://www.happyscribe.com/pt" target="_blank">HappyScribe - App para Legendas</a></li>
+     <li><a href="https://webaim.org/" target="_blank">WebAim</a></li>     
+    <li><a href="https://olhardigital.com.br/" target="_blank">Olhar Digital</a></li>
+      
+    <a class="voltar" href="#inicio">(voltar ao topo)</a>
+  </section>
+</body>
+<footer><h5>&copy;Desenvolvido por IzauraTM - Bootcamp Santander 2025 Front-End JS - <a href="https://dio.me/" target="_blank">Dio.me</a>. Todos os Direitos Reservados.</h5></footer>
+
+</html>
